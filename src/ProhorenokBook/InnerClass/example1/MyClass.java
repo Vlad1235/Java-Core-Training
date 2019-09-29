@@ -9,3 +9,9 @@ public class MyClass {
         obj.func();
     }
 }
+/*
+A.func()
+A.B.func()
+10
+10
+ */

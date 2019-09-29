@@ -7,8 +7,11 @@ public class A {
         System.out.println("A.func()");
         obj.func();
     }
+    public void makeClassB(){
+        new B();
+    }
 
-    public static class B {    // Статический вложенный класс
+    private static class B {    // Статический вложенный класс
         public void func() {
             System.out.println("A.B.func()");
             System.out.println(x);
