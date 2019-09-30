@@ -1,4 +1,4 @@
-package ProhorenokBook.Object_class.ToString_usage;
+package ProhorenokBook.Object_class.ToString_redefinition;
 
 public class PointTest {
     public static void main(String[] args) {
