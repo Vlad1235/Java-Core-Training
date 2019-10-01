@@ -22,5 +22,7 @@ public class TreeSet_usage {
         tree.add(b3);
         System.out.println(tree);
     }
-
 }
+/*
+[В поиске Немо, Как устроены кошки, Постройте заново свое тело]
+ */
