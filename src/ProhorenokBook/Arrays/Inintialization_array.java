@@ -16,6 +16,7 @@ public class Inintialization_array {
 
         int[] arr4 = {10,20,30,40};
         printArr(arr4);
+        System.out.println();
         printArr(new int[] {50,60,70});// создание аннонимного массива.
     }
     private static void printArr(int[] a){
@@ -28,5 +29,6 @@ public class Inintialization_array {
 [0, 0, 0, 0, 0]
 [false, false, false, false]
 [null, null, null, null, null, null]
-10	20	30	40	50	60	70
+10	20	30	40
+50	60	70
  */

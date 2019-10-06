@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Бинарный поиск в ArrayList()
+ * Различные методы в ArrayList()
  */
 public class Test6 {
     public static void main(String[] args) {
@@ -42,5 +42,19 @@ public class Test6 {
         List<String> arr3 = new ArrayList<String>();
         Collections.addAll(arr3,"Слово","Слово","дело","слово","глупость","Результат");
         System.out.println(Collections.frequency(arr3,"слово")); // 1
+
+        /*
+        Поиск максимального и и минималного значений в списке
+         */
+        List<Integer> arr4 = new ArrayList<>();
+        Collections.addAll(arr4,12,2,5,6,7,8,9);
+        Integer min = Collections.min(arr4);
+        System.out.println(min); // 2
+        Integer max = Collections.max(arr4);
+        System.out.println(max); // 12
+
+
+
+
     }
 }
