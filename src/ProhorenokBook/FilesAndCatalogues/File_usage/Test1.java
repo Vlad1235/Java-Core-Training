@@ -1,6 +1,7 @@
 package ProhorenokBook.FilesAndCatalogues.File_usage;
 
 import java.io.File;
+import java.io.IOException;
 
 /**
  * Создаем экземпляр класса File
