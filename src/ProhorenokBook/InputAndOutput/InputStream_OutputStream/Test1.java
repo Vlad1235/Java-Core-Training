@@ -8,7 +8,7 @@ import java.io.UnsupportedEncodingException;
 public class Test1 {
     public static void main(String[] args) {
         /*
-        Класс OutputStream - базовый для потоков вывода
+        Класс OutputStream - базовый абстрактный для потоков вывода(записи)
         метод write() - записывает данные в поток
         метод flush() - сбрасывает данные из буфера в файл
         метод close() - сбрасывает данные из буфера в файл, закрывает поток и высвобождает ресурсы.

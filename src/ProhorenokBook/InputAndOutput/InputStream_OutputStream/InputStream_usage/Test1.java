@@ -12,6 +12,7 @@ import java.io.*;
  */
 public class Test1 {
     public static void main(String[] arg) throws IOException {
+
         InputStream in = null;
         OutputStream out = null;
 
