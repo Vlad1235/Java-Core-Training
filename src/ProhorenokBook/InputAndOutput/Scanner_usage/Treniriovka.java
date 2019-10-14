@@ -1,4 +1,4 @@
-package ProhorenokBook.InputAndOutput;
+package ProhorenokBook.InputAndOutput.Scanner_usage;
 
 public class Treniriovka {
     public static void main(String[] args) {

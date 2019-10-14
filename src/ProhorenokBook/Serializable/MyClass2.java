@@ -11,7 +11,7 @@ public class MyClass2 {
             InputStream in=null;
 
             try{
-                in = new FileInputStream("C:"+File.separator+"Users"+ File.separator+"Work"+File.separator+"IdeaProjects"+File.separator+"PolnoyePovtorenie"+"src"+File.separator+"ProhorenokBook"+File.separator+"Serializable"+ File.separator+"TestSerializable.txt");
+                in = new FileInputStream("C:"+File.separator+"Users"+ File.separator+"Work"+File.separator+"IdeaProjects"+File.separator+"PolnoyePovtorenie"+File.separator+"src"+File.separator+"ProhorenokBook"+File.separator+"Serializable"+ File.separator+"TestSerializable.txt");
                 ObjectInputStream data = new ObjectInputStream(in);
                 Class1 obj3=(Class1)data.readObject();
                 Class1 obj4=(Class1)data.readObject();
@@ -23,3 +23,7 @@ public class MyClass2 {
                 }
         }
 }
+/* // Успешно!
+20
+88
+ */

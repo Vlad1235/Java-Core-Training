@@ -17,13 +17,19 @@ import java.nio.file.Paths;
 public class Test0 {
     public static void main(String[] args) throws IOException {
         /*
-        Пример чтения файла по одному байту.
+        Пример ЗАПИСИ файла по одному байту.
          */
         byte[] bytes = "string".getBytes();
         Files.write(Paths.get("C:\\Users\\Work\\IdeaProjects\\PolnoyePovtorenie\\src\\ProhorenokBook\\InputAndOutput\\InputStream_OutputStream\\testingFile.txt"),bytes);
+        /*
+        Считывание из файла.
+         */
         InputStream in = null;
         try{
             in = new FileInputStream("C:\\Users\\Work\\IdeaProjects\\PolnoyePovtorenie\\src\\ProhorenokBook\\InputAndOutput\\InputStream_OutputStream\\testingFile.txt");
+            /*
+            Считывание по 1 байту за раз
+             */
             int c;
             while ((c = in.read()) !=-1);
             System.out.println((char)c + " ");
@@ -32,7 +38,7 @@ public class Test0 {
         }
 
         /*
-        Чтение файла по байтам.
+        Чтение файла во количестве байтов за раз, равное длине указанного массива или меньше.
          */
         byte[] buffer = new byte[5];
         InputStream inn = null;
