@@ -7,6 +7,7 @@ package ProhorenokBook.InputAndOutput.PrintWriter_PrintStream;
  * printf()
  * format()
  * в классе PrintStream метод write() работает с байтами, а в классе PrintWriter с символами
+ *
  */
 public class Test0 {
 }

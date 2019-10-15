@@ -1,4 +1,4 @@
-package ProhorenokBook.InputAndOutput.Scanner_usage;
+package ProhorenokBook.InputAndOutput.Scanner_usage.otherExample;
 
 import java.util.Scanner;
 /*
