@@ -12,8 +12,12 @@ import java.nio.file.StandardOpenOption;
  */
 public class Test2 {
     public static void main(String[] args) throws Exception {
+        /*
+        Способ записи из 3х строк, в 1ой прописать
+         */
         try(
                 BufferedWriter buf = Files.newBufferedWriter(Paths.get("C:\\Users\\Work\\IdeaProjects\\PolnoyePovtorenie\\src\\ProhorenokBook\\BufferedStream\\BufferedWriter_BufferedReader\\forTest.txt"), Charset.forName("utf-8"), StandardOpenOption.APPEND);
+                // BufferedWriter buf = Files.newBufferedWriter(Paths.get("C:\\Users\\Work\\IdeaProjects\\PolnoyePovtorenie\\src\\ProhorenokBook\\BufferedStream\\BufferedWriter_BufferedReader\\forTest.txt"), Charset.forName("utf-8")); // Тут файл будет с нуля перезаписан
                 ){
             buf.newLine();
             buf.write("НОВАЯ строка добавлена другим способом");
