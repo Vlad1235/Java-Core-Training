@@ -8,6 +8,7 @@ import java.util.Scanner;
  * метод nextLine() - позволяет читать построчно
  * метод hasNext() - возвращает true если можно прочитать данные
  * метод close() - Обязательно закрывать поток!
+ * и др
  */
 public class Test1 {
     public static void main(String[] args) {
