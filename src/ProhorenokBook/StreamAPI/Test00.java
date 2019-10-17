@@ -38,6 +38,11 @@ import java.util.stream.Stream;
  * mapToDouble()
  * mapToObj() - преобразует поток элементарных данных в объектный поток
  *
+ * Объединение и добавление потоков
+ * concat() - объединение двух однотипных потоков
+ * flatMap() - позволяет на основе одного элемента добавить поток элементов
+ * др
+ *
  */
 public class Test00 {
     public static void main(String[] args) {
