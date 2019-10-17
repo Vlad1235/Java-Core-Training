@@ -2,9 +2,9 @@ package ProhorenokBook.StreamAPI;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -27,7 +27,16 @@ import java.util.stream.Stream;
  *  sequential() - параллельный в последовательный преобразование
  *  unordered() - делает поток неупорядоченным.Упорядоченный поток требует дополнительных затрат ресурсов для поддержания порядка следования элементов.Если сделать неупорядоченным, то при использовании параллельных потоков  можно на некоторых операция получить прирост производительности.
  *  takeWhile() - применяет метод predicate к элементам потока до тех пор, пока он возращает true. Поток должен быть последовательным и упорядоченным
- * dropWhile() пока не понятно
+ * dropWhile()  - подобен предыдущему
+ *
+ * Преобразование типа потока  - поток одного типа можно преобразовать в поток другого с помощью ПРОМЕЖУТОЧНЫХ методов:
+ * asLongStream() - преобразует поток IntStream в поток LongStream
+ * asDoubleStream()
+ * boxed() - преобразует поток элементарных типов в поток объектных данных
+ * mapToInt() - преобразует поток в IntStream
+ * mapToLong()
+ * mapToDouble()
+ * mapToObj() - преобразует поток элементарных данных в объектный поток
  *
  */
 public class Test00 {
@@ -109,7 +118,43 @@ public class Test00 {
          */
         Stream<Integer> stream = Stream.of(0,1,2,3,4,3,2,1,0);
                                         stream.takeWhile(n->n<=3)
-                                                .forEachOrdered(x-> System.out.print(x + " ")); //
+                                                .forEachOrdered(x-> System.out.print(x + " ")); //2 4 6 10 12 14 18
+        System.out.println();
+
+
+        /*
+        преобразование одного потока одного типа в поток другого
+         */
+        IntStream.of(1,2,3,4,5)
+                .asDoubleStream() //asLongStream()
+                .forEachOrdered(n-> System.out.print(n + " ")); // 1.0 2.0 3.0 4.0 5.0
+        System.out.println();
+
+        /*
+        Преобразование массива целых чисел в список
+         */
+        int[] a = {1,2,3,4,5,6};
+        List<Integer> arr2 = IntStream.of(a)
+                                        .boxed()
+                                        .collect(Collectors.toList());
+        System.out.println(arr2); // [1, 2, 3, 4, 5, 6]
+
+        /*
+        Преобразование в IntStream
+         */
+        DoubleStream.of(1.2,5.0,4.3)
+                .mapToInt(x->(int)x)
+                .forEachOrdered(n-> System.out.print(n + " "));
+        System.out.println(); // 1 5 4
+
+        /*
+        Поток элементарных типов в объектный поток
+         */
+        int[] aa = {1,2,3,4,5,6,7};
+        List<Integer> arr3 = IntStream.of(aa)
+                                        .mapToObj(x->Integer.valueOf(x))
+                                        .collect(Collectors.toList());
+        System.out.println(arr3); //[1, 2, 3, 4, 5, 6, 7]
     }
 }
 /*
