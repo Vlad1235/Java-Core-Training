@@ -5,6 +5,7 @@ public class PlayerTest {
         System.out.println(Player.playerCount); // Доступ к статической переменной получают также как и для любой другой статической переменной
         Player one = new Player("Тайгер Вудс");
         System.out.println(Player.playerCount);
+
     }
 }
 /*

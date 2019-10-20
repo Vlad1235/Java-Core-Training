@@ -2,7 +2,7 @@ package Constant;
 
 public class Class1 {
     // Обычная константа класса
-    public int MY_CONST;
+    public final int MY_CONST;
     // Статическая константа класса  - глобальная!
     public static final double PI = 3.14;
 

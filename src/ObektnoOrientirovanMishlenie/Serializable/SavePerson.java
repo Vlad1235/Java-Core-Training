@@ -10,6 +10,7 @@ import java.io.Serializable;
 public class SavePerson implements Serializable {
     public SavePerson() {
         Person person = new Person("Джек Воробей");
+
         try{
             FileOutputStream fos = new FileOutputStream("Name.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);

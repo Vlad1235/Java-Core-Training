@@ -1,4 +1,4 @@
-package GrokhaemAlgorytmyBook.BinarySearchAlgorythm;
+package Algorythms.GrokhaemAlgorytmyBook.BinarySearchAlgorythm;
 /**
  * Бинарный алгоритм поиска.O(log[2]n)
  */

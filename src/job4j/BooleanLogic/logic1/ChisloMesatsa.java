@@ -5,11 +5,15 @@ public class ChisloMesatsa {
         //Дано число месяца (тип int).
         //Необходимо определить время года (зима, весна, лето, осень) и вывести на консоль.
 
-        int mesyatz = 7;
+       private int mesyatz;
 
-        public void mesatz() {
+    public void setMesyatz(int mesyatz) {
+        this.mesyatz = mesyatz;
+    }
 
-            String vremyaGoda = new String();
+    public void mesatz() {
+
+            String vremyaGoda;
 
             switch (mesyatz) {
                 case 1:
@@ -64,10 +68,15 @@ public class ChisloMesatsa {
                     vremyaGoda = "Oshibka";
                     break;
             }
+        }
 
-            }
+    public static void main(String[] args) {
+        ChisloMesatsa output = new ChisloMesatsa();
+        output.setMesyatz(5);
+        output.mesatz();
 
     }
+}
         //в операторе switch имеется ключевое слово default, к которому перейдет программа, в случае,
     // если ни одно из условий case не выполнится. Тоесть у меня переменная во всех случаях
     // будет инициализована, прежде чем будет выведена на консоль.

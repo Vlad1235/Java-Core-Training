@@ -1,6 +1,4 @@
-package GrokhaemAlgorytmyBook.RecursionAlgorythm;
-
-import com.sun.source.tree.ArrayAccessTree;
+package Algorythms.GrokhaemAlgorytmyBook.RecursionAlgorythm;
 
 import java.util.Arrays;
 

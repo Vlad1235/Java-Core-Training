@@ -1,4 +1,4 @@
-package Info_to_method.Array;
+package Clone.Array;
 
 import java.util.Arrays;
 

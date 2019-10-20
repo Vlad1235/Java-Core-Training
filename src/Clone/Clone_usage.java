@@ -1,4 +1,4 @@
-package Info_to_method.Object_class;
+package Clone;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

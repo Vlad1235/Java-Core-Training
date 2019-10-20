@@ -1,4 +1,4 @@
-package GrokhaemAlgorytmyBook.RecursionAlgorythm;
+package Algorythms.GrokhaemAlgorytmyBook.RecursionAlgorythm;
 /**
  * Рекурсия.
  * Рекурсия обязательно должа содержать базовый случай, чтобы алгоритм не был бесконечным.

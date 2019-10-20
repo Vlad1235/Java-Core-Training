@@ -8,9 +8,7 @@ public class ColorBox extends Box {
     int color;
 
     ColorBox(double x, double y, double z, int c){
-        width = x;
-        height = y;
-        depth = z;
+        super(x,y,z);
         color = c;
     }
 }

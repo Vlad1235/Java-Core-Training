@@ -1,4 +1,4 @@
-package Static;
+package HeadFirstJava.Static;
 
 public class StaticSuper {
     /*
@@ -8,7 +8,7 @@ public class StaticSuper {
             System.out.println("Родительский статистический блок");
         }
     /*
-Static.StaticSuper - это конструктор родительского класса.
+HeadFirstJava.Static.StaticSuper - это конструктор родительского класса.
      */
     StaticSuper() {
             System.out.println("Родительский конструктор");

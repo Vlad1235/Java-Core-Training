@@ -1,4 +1,4 @@
-package Static.MethodFabrika;
+package HeadFirstJava.Static.MethodFabrika;
 
 public class Class1 {
     private int x;

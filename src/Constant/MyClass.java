@@ -19,6 +19,9 @@ public class MyClass {
         System.out.println(c.MY_CONST); // 10
         System.out.println(d.MY_CONST); // 20
         System.out.println(e.MY_CONST); // 30
+//        d.MY_CONST = 12;
+//        System.out.println(d.MY_CONST);
+//        Error:(22, 10) java: cannot assign a value to final variable MY_CONST
     }
 }
 /*

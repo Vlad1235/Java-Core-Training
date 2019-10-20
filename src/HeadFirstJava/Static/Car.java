@@ -1,4 +1,4 @@
-package Static;
+package HeadFirstJava.Static;
 
 public class Car {
 

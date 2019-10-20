@@ -1,4 +1,4 @@
-package Static;
+package HeadFirstJava.Static;
 
 public class StaticTests extends StaticSuper {
 
@@ -13,7 +13,7 @@ public class StaticTests extends StaticSuper {
     }
 
     /*
-  Static.StaticTests  - Конструктор. Причем сначала запускаяется конструктор из родительского класса.
+  HeadFirstJava.Static.StaticTests  - Конструктор. Причем сначала запускаяется конструктор из родительского класса.
      */
 
 

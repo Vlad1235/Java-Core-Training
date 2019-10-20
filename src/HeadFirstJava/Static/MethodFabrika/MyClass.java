@@ -1,4 +1,4 @@
-package Static.MethodFabrika;
+package HeadFirstJava.Static.MethodFabrika;
 
 /**
  * Метод-фабрика
