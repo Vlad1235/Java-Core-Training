@@ -93,7 +93,7 @@ StaticVariable
 String_about
 ---Каталог false
  --- Файлfalse
-Test.java
+MyDialog.java
 ---Каталог false
  --- Файлfalse
 TryCatch

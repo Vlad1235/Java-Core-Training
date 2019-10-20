@@ -6,7 +6,7 @@ public class Test {
         Box<Double> obj2 = new Box<Double>(5.6);
         Test.print1(obj1);           // 10
         // Можно только Box<Integer>
-        // Test.print1(obj2);
+        // MyDialog.print1(obj2);
         Test.print2(obj1);           // 10
         Test.print2(obj2);           // 5.6
         Test.print3(obj1);           // 10.0
@@ -15,7 +15,7 @@ public class Test {
         Test.print4(obj2);           // 5.6
         Test.print5(obj1);           // 10
         // Можно только Box<Integer> и Box<Number>
-        // Test.print5(obj2);
+        // MyDialog.print5(obj2);
         Box<Number> obj3 = new Box<Number>(5.6);
         Test.print5(obj3);           // 5.6
     }
