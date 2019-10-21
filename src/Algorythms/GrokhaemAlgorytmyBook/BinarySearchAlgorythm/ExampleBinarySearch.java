@@ -54,7 +54,7 @@ public class ExampleBinarySearch {
                 position = (first+last)/2; // задаем новые первый и последний элементы и снова прогоняем цикл.
            }
             if(first <=last){
-                System.out.println(item + " является" + ++position + " элементом массива.");
+                System.out.println(item + " является " + ++position + " элементом массива.");
                 System.out.println("Метод бинарного поиска нашел число после " + comparisonCount + " сравнений.");
             } else {
                 System.out.println("Элемент не найден в массиве. Метод бинарного поиска закончил работу после " + comparisonCount + " сравнений.");

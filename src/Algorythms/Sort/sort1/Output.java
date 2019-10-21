@@ -2,8 +2,8 @@ package Algorythms.Sort.sort1;
 
 public class Output {
     public static void main(String[] args){
-        ArrayString output1 = new ArrayString();
-        output1.arrayString();
+        BubbleSort output1 = new BubbleSort();
+        output1.bubbleSort1();
         System.out.println();
     }
 }

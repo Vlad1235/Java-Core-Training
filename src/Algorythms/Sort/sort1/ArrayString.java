@@ -1,23 +1,29 @@
 package Algorythms.Sort.sort1;
 
 import java.util.Arrays;
-
-public class ArrayString {
     /*
     В этом примере массив имен сортируется в порядке от А до Я. Для того
     чтобы отсортировать массив в обратном порядке, необходимо в
     методе sort() указать Collections.reverseOrder().
      */
-    public void arrayString(){
-        String [] names = new String[] {"Masha", "Dasha", "Nastya", "Olya"};
-        Arrays.sort(names);
-        for( int i = 0; i < names.length; i++){
-            System.out.print(names[i] + " ,");
-        }
+
+public class ArrayString {
+    public static void main(String[] args) {
+            String[] names = new String[]{"Masha", "Dasha", "Nastya", "Olya", "olesya"};
+            arrayString(names);
     }
+        public static void arrayString(String[] names) {
+            for (int index = 0; index < names.length; index++) {
+                names[index].toLowerCase();
+            }
+            Arrays.sort(names);
+            for (int i = 0; i < names.length; i++) {
+                System.out.print(names[i] + " ,");
+            }
+        }
 }
 /*
-Dasha ,Masha ,Nastya ,Olya ,
+Dasha ,Masha ,Nastya ,Olya ,olesya ,
  */
 
 /*
