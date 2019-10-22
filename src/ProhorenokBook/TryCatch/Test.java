@@ -14,7 +14,8 @@ public class Test {
         while (true) {
             System.out.print("Введите число: ");
             s = in.nextLine();
-            if (s.equals("stop")) break;
+            if (s.equals("stop"))
+                break;
             try {
                 x = Integer.parseInt(s);
                 if (x == 0) break;

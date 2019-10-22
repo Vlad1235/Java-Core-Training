@@ -1,4 +1,4 @@
-package Algorythms.GrokhaemAlgorytmyBook.SelectionSortAlgorythm;
+package GrokhaemAlgorytmyBook.SelectionSortAlgorythm;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.JARarchive;
+package ProhorenokBook.GUI;
 
 import javax.swing.*;
 

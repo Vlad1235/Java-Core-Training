@@ -1,4 +1,4 @@
-package Algorythms.GrokhaemAlgorytmyBook.RecursionAlgorythm;
+package GrokhaemAlgorytmyBook.RecursionAlgorythm;
 
 import java.util.Arrays;
 
