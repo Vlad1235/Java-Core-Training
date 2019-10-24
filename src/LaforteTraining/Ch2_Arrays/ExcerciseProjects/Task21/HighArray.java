@@ -78,13 +78,30 @@ public class HighArray {
      */
         public void removeMax(){
             int maxValue = (int)getMax();
-                for (int index = 0;index<a.length;index++){
-                        for (int index1 = 0; index1<a.length-1;index1++){
-                            long temp = a[index];
-                            //////
+                for (int index = 1;index < a.length;index++){
+                            a[index-1] = a[index]; // сравниваем предыдущий и текущий.
                         }
-                }
+                nElems--;
         }
 
-    }  // end class HighArray
+        public long[] sortArray(){ // Проблема! Сортирует и первоначальный массив а! Нужно лишь b
+
+            int bSize = 0;
+            bSize = a.length;
+            long[] b = new long[bSize];
+            for (int index = 0; index<a.length;index++){
+                for (int index1 = 0;index1<a.length-1;index1++){
+                            b[index] = a[index];
+                    if (a[index1] < a[index1+1]){
+                            long tmp = b[index];
+                            b[index]=b[index+1];
+                            b[index+1] = tmp;
+                    }
+                }
+            }
+            return b;
+        }
+}
+
+
 

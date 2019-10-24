@@ -1,8 +1,9 @@
 package LaforteTraining.Ch2_Arrays.ExcerciseProjects.Task21;
 
+import java.util.Arrays;
+
 public class HighArrayApp {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         int maxSize = 100;            // array size
         HighArray arr;                // reference to array
         arr = new HighArray(maxSize); // create the array
@@ -18,6 +19,7 @@ public class HighArrayApp {
         arr.insert(66);
         arr.insert(33);
         arr.insert(10000);
+        arr.insert(123456);
 
         arr.display();                // display items
 
@@ -33,5 +35,20 @@ public class HighArrayApp {
 
         arr.display();                // display items again
         System.out.println(arr.getMax());
+        arr.removeMax();
+        arr.display();
+
+        long[] newArray = arr.sortArray();
+        System.out.println(Arrays.toString(newArray));
+        arr.display(); // тоже отсортирован!
     }  // end main()
 }
+/*
+77 99 80 55 22 88 11 0 66 33 10000 123456
+Can't find 35
+77 80 22 88 11 66 33 10000 123456
+123456
+10000 88 80 77 66 33 22 11
+[10000, 88, 80, 77, 66, 33, 22, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+10000 88 80 77 66 33 22 11
+ */
