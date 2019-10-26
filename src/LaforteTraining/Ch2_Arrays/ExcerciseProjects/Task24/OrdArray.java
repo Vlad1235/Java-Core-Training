@@ -1,8 +1,5 @@
 package LaforteTraining.Ch2_Arrays.ExcerciseProjects.Task24;
 
-import static java.lang.System.exit;
-import static java.lang.System.setOut;
-
 /**
  * Упорядоченный массив(сортированный)
  * Операции:
@@ -16,12 +13,12 @@ public class OrdArray {
 
         private long[] a;                 // ref to array a
         private int nElems;               // number of data items
-        int lowerBound = 0;
-        int upperBound = nElems-1;
+
 
    public OrdArray(int max) {         // constructor
             a = new long[max];             // create array
-            nElems = 0;
+            nElems = 1;
+            a[0] = 0;
         }
 
         public int size() {
@@ -33,12 +30,16 @@ public class OrdArray {
      * @param searchKey
      * @return curIn
      */
-    public int find(long searchKey) {
+    public long find(long searchKey) {
             int curInn; // текущий индекс
+//            Arrays.sort(a);
+            int lowerBound = 0;
+            int upperBound = nElems-1;
+
             while(true) {
                 curInn = (lowerBound + upperBound ) / 2; // Индекс устанавливается в середину этого диапазона
-                if(a[curInn]==searchKey)
-                    return curInn;              // проверка на дурака, вдруг с первого раза попадет
+                if(a[curInn] == searchKey)
+                    return a[curInn];              // проверка на дурака, вдруг с первого раза попадет
                 else if(lowerBound > upperBound) // В конечном итоге массив сократится настолько, что дальнейшее деление станет невозможным. Тут это проверяется и если выполняется, значит поиск завершен.
                     return nElems;             // Поиск не может продолжаться без диапазона.Если заданный элемент не найден, метод возвращает общее количество элементов. Пользователь понимает это как показатель, что значение не найдено.
                 else                          // деление диапазона
@@ -50,47 +51,65 @@ public class OrdArray {
             }  // end find()
 
 
-        public void insert(long value) {   // put element into array
-            int curIn,k;
-             while (true) {
-                 curIn = (lowerBound + upperBound) / 2;
-                    if (a[curIn]>value){
-                        break;
-                    } else if (lowerBound>upperBound) {
-                        break;
-                    }   else {
-                        if (a[curIn] < value){
-                            lowerBound = curIn+1;
-                        } else {
-                            upperBound = curIn-1;
+        public void insert(long value) {// put element into array
+            int middleIndex;
+            int lowerBound = 0;
+            int upperBound = nElems-1;
+
+
+                for (int index = 0; index < nElems-1; index++) {
+                    for (int index1 = 0; index1 < nElems - 2; index1++) {
+                        if (a[index1] < a[index1 + 1]) { // по убыванию
+                            long tmp = a[index1];
+                            a[index1] = a[index1 + 1];
+                            a[index1 + 1] = tmp;
                         }
                     }
-             }
-            for(k=nElems; k > curIn; k--)    // перемещение последующих элементов вверх
-                a[k] = a[k-1];
-            a[curIn] = value;                  // insert it
-            nElems++;                      // increment size
-        }  // end insert()
+                }
 
-        //-----------------------------------------------------------
+                while (true) {
+                    middleIndex = (lowerBound + upperBound) / 2;
+                    if (a[middleIndex] == value && a[upperBound] > value) {
+                        break;
+                    } else if (lowerBound >= upperBound) {
+                        break;
+                    } else if (a[middleIndex] < value) {
+                        upperBound = middleIndex - 1;
+                    } else {
+                        lowerBound = middleIndex + 1;
+                    }
+                }
+                a[middleIndex+1] = value;
+                nElems++;
+
+//            for(k = nElems; k > middleIndex; k--)    // перемещение последующих элементов вверх
+//                a[k] = a[k-1];
+//            a[middleIndex] = value;                  // insert it
+//            nElems++;                      // increment size
+            }
+
+
+
 
         public boolean delete(long value) {
-            int j = find(value);           // вызов метод поиска
+            long j = find(value);           // вызов метод поиска
+            long k;
             if(j==nElems)                  // can't find it
                 return false;
             else {                        // found it
-                for(int k=j; k<nElems; k++) // move bigger ones down
-                    a[k] = a[k+1];
+                for( k = j; k < nElems; k++) // move bigger ones down
+                    a[(int)k] = a[(int)k+1];
                 nElems--;                   // decrement size
                 return true;
             }
         }  // end delete()
-        //-----------------------------------------------------------
+
+
         public void display()    {         // displays array contents
             for(int j=0; j<nElems; j++)       // for each element,
                 System.out.print(a[j] + " ");  // display it
             System.out.println("");
         }
-        //-----------------------------------------------------------
+
 }  // end class OrdArray
 

@@ -1,12 +1,12 @@
 package LaforteTraining.Ch2_Arrays.ExcerciseProjects.Task24;
 
+
 public class OrdArrayUsage {
     public static void main(String[] args) {
         int maxSize = 100;             // array size
-        OrdArray arr;                  // reference to array
-        arr = new OrdArray(maxSize);   // create the array
+        OrdArray arr = new OrdArray(maxSize);   // create the array
 
-        arr.insert(77);                // insert 10 items
+        arr.insert(77);                // insert 12 items
         arr.insert(99);
         arr.insert(44);
         arr.insert(55);
@@ -19,7 +19,10 @@ public class OrdArrayUsage {
         arr.insert(123456);
         arr.insert(12);
 
-        int searchKey = 128;            // search for item
+        arr.display();
+        System.out.println(arr.size());
+
+        int searchKey = 12;            // search for item
         if( arr.find(searchKey) != arr.size() )
             System.out.println("Found " + searchKey);
         else
@@ -27,15 +30,22 @@ public class OrdArrayUsage {
 
         arr.display();                 // display items
 
-        arr.delete(0);                // delete 3 items
+        arr.delete(33);                // delete 3 items
         arr.delete(55);
         arr.delete(99);
+        arr.delete(0);
+        arr.delete(123456);
+        arr.delete(22);
+        arr.delete(44);
 
-        arr.display();                 // display items again
+        arr.display(); // display items again
+
     }  // end main()
 }
 /*
-Can't find 128
-0 11 22 33 44 55 66 77 88 99
-11 22 33 44 66 77 88
+44 22 11 0 33 12 55 66 88 99 123456 77
+12
+Can't find 33
+44 22 11 0 33 12 55 66 88 99 123456 77
+44 11 0 33 12 66 88 77
  */
