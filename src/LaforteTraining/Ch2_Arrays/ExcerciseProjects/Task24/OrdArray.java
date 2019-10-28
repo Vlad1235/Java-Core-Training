@@ -17,22 +17,15 @@ public class OrdArray {
 
    public OrdArray(int max) {         // constructor
             a = new long[max];             // create array
-            nElems = 1;
-            a[0] = 0;
+            nElems = 0;
         }
 
         public int size() {
             return nElems;
         }
 
-    /**
-     * Метод ищет заданный элемент многократным половинным делением диапазона элементов массива
-     * @param searchKey
-     * @return curIn
-     */
     public long find(long searchKey) {
             int curInn; // текущий индекс
-//            Arrays.sort(a);
             int lowerBound = 0;
             int upperBound = nElems-1;
 
@@ -50,55 +43,56 @@ public class OrdArray {
                 }  // end while
             }  // end find()
 
+        private void sorting(){
+
+                            for (int index = 0; index < nElems-1; index++) {
+                                for (int index1 = 0; index1 < nElems-index; index1++) {
+                                    if (a[index1] < a[index1 + 1]) { // по убыванию
+                                        long tmp = a[index1];
+                                        a[index1] = a[index1 + 1];
+                                        a[index1 + 1] = tmp;
+                                    }
+                                }
+                            }
+       }
 
         public void insert(long value) {// put element into array
-            int middleIndex;
-            int lowerBound = 0;
-            int upperBound = nElems-1;
 
+            if (nElems == 0) {
+                a[0] = value;
+                nElems++;
+            } else {
+                sorting();
 
-                for (int index = 0; index < nElems-1; index++) {
-                    for (int index1 = 0; index1 < nElems - 2; index1++) {
-                        if (a[index1] < a[index1 + 1]) { // по убыванию
-                            long tmp = a[index1];
-                            a[index1] = a[index1 + 1];
-                            a[index1 + 1] = tmp;
-                        }
-                    }
-                }
-
+                int middleIndex;
+                int lowerBound = 0;
+                int upperBound = nElems-1;
                 while (true) {
                     middleIndex = (lowerBound + upperBound) / 2;
-                    if (a[middleIndex] == value && a[upperBound] > value) {
-                        break;
+                    if (middleIndex == a[nElems-1] ) {
+                        a[middleIndex+1] = value;
+                        nElems++;
+
                     } else if (lowerBound >= upperBound) {
                         break;
-                    } else if (a[middleIndex] < value) {
+                    } else if (a[middleIndex] <= value) {
                         upperBound = middleIndex - 1;
                     } else {
                         lowerBound = middleIndex + 1;
                     }
                 }
-                a[middleIndex+1] = value;
-                nElems++;
-
-//            for(k = nElems; k > middleIndex; k--)    // перемещение последующих элементов вверх
-//                a[k] = a[k-1];
-//            a[middleIndex] = value;                  // insert it
-//            nElems++;                      // increment size
             }
-
-
+        }
 
 
         public boolean delete(long value) {
             long j = find(value);           // вызов метод поиска
-            long k;
+            int k;
             if(j==nElems)                  // can't find it
                 return false;
             else {                        // found it
-                for( k = j; k < nElems; k++) // move bigger ones down
-                    a[(int)k] = a[(int)k+1];
+                for( k = (int)j; k < nElems; k++) // move bigger ones down
+                    a[k] = a[k+1];
                 nElems--;                   // decrement size
                 return true;
             }

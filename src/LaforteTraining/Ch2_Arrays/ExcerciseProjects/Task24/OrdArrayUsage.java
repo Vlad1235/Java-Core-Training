@@ -20,9 +20,10 @@ public class OrdArrayUsage {
         arr.insert(12);
 
         arr.display();
+
         System.out.println(arr.size());
 
-        int searchKey = 12;            // search for item
+        int searchKey = 44;            // search for item
         if( arr.find(searchKey) != arr.size() )
             System.out.println("Found " + searchKey);
         else
@@ -30,13 +31,13 @@ public class OrdArrayUsage {
 
         arr.display();                 // display items
 
-        arr.delete(33);                // delete 3 items
-        arr.delete(55);
-        arr.delete(99);
-        arr.delete(0);
-        arr.delete(123456);
-        arr.delete(22);
+        arr.delete(99);                // delete 3 items
         arr.delete(44);
+//        arr.delete(99);
+//        arr.delete(0);
+//        arr.delete(123456);
+//        arr.delete(22);
+//        arr.delete(44);
 
         arr.display(); // display items again
 

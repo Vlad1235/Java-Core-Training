@@ -1,4 +1,4 @@
-package Algorythms.Sort.sort2;
+package Algorythms.Sort.sort1;
 
 public class SortPuzirk {
     /*

@@ -1,4 +1,4 @@
-package Algorythms.Sort.sort2;
+package Algorythms.Sort.sort1;
 
 import java.util.Arrays;
 import java.util.Collections;
