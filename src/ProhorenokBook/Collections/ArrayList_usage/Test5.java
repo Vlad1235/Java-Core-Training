@@ -1,4 +1,4 @@
-package ProhorenokBook.Collections.List_usage.ArrayList_usage;
+package ProhorenokBook.Collections.ArrayList_usage;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Получение разного вида доступа к элементам
  */
-public class Test5 {
+public class    Test5 {
     public static void main(String[] args) {
     /*
     Возвращает элемент, расположенный по указанному индексу

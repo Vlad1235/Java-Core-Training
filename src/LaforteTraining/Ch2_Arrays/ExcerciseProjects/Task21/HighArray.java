@@ -4,6 +4,8 @@ public class HighArray {
 
         private long[] a;                 // ref to array a
         private int nElems;               // number of data items
+        private long[] b = new long[nElems];
+
         //-----------------------------------------------------------
    public HighArray(int max)         // constructor
         {
@@ -46,11 +48,16 @@ public class HighArray {
             }
         }  // end delete()
         //-----------------------------------------------------------
-        public void display()             // displays array contents
-        {
-            for(int j=0; j<nElems; j++)       // for each element,
-                System.out.print(a[j] + " ");  // display it
-            System.out.println("");
+        public void display(String origin) {             // displays array contents
+            if (origin.equals("origin")) {
+                for (int j = 0; j < nElems; j++)       // for each element,
+                    System.out.print(a[j] + " ");  // display it
+                System.out.println("");
+            } else {
+                for (int j = 0; j < nElems; j++)       // for each element,
+                    System.out.print(b[j] + " ");  // display it
+                System.out.println("");
+            }
         }
         //-----------------------------------------------------------
 
@@ -77,30 +84,27 @@ public class HighArray {
      * Метод для удаления наибольшего элемента массива
      */
         public void removeMax(){
-            int maxValue = (int)getMax();
-                for (int index = 1;index < a.length;index++){
-                            a[index-1] = a[index]; // сравниваем предыдущий и текущий.
+                for (int index = nElems;index < nElems;index--){
+                            a[index] = a[index+1]; // сравниваем предыдущий и текущий.
                         }
                 nElems--;
         }
 
-        public long[] sortArray(){ // Проблема! Сортирует и первоначальный массив а! Нужно лишь b
-
-            int bSize = 0;
-            bSize = a.length;
-            long[] b = new long[bSize];
-            for (int index = 0; index<a.length;index++){
-                for (int index1 = 0;index1<a.length-1;index1++){
-                            b[index] = a[index];
-                    if (a[index1] < a[index1+1]){
-                            long tmp = b[index];
-                            b[index]=b[index+1];
-                            b[index+1] = tmp;
+        public long[] sortArray(){ //
+                for (int x=0;x<a.length;x++){
+                    b[x] = a[x];
+                };
+                    for (int index = 0; index<b.length;index++){
+                        for (int index1 = 0;index1<b.length-1;index1++){
+                            if (b[index1] < b[index1+1]){
+                                    long tmp = b[index];
+                                    b[index]=b[index+1];
+                                    b[index+1] = tmp;
+                            }
+                        }
                     }
+                    return b;
                 }
-            }
-            return b;
-        }
 }
 
 

@@ -43,45 +43,17 @@ public class OrdArray {
                 }  // end while
             }  // end find()
 
-        private void sorting(){
-
-                            for (int index = 0; index < nElems-1; index++) {
-                                for (int index1 = 0; index1 < nElems-index; index1++) {
-                                    if (a[index1] < a[index1 + 1]) { // по убыванию
-                                        long tmp = a[index1];
-                                        a[index1] = a[index1 + 1];
-                                        a[index1 + 1] = tmp;
-                                    }
-                                }
-                            }
-       }
 
         public void insert(long value) {// put element into array
 
-            if (nElems == 0) {
-                a[0] = value;
-                nElems++;
-            } else {
-                sorting();
-
-                int middleIndex;
-                int lowerBound = 0;
-                int upperBound = nElems-1;
-                while (true) {
-                    middleIndex = (lowerBound + upperBound) / 2;
-                    if (middleIndex == a[nElems-1] ) {
-                        a[middleIndex+1] = value;
-                        nElems++;
-
-                    } else if (lowerBound >= upperBound) {
-                        break;
-                    } else if (a[middleIndex] <= value) {
-                        upperBound = middleIndex - 1;
-                    } else {
-                        lowerBound = middleIndex + 1;
-                    }
-                }
-            }
+            int j;
+            for(j=0; j<nElems; j++)        // find where it goes
+                if(a[j] > value)            // (linear search)
+                    break;
+            for(int k=nElems; k>j; k--)    // move bigger ones up
+                a[k] = a[k-1];
+            a[j] = value;                  // insert it
+            nElems++;                      // increment size
         }
 
 

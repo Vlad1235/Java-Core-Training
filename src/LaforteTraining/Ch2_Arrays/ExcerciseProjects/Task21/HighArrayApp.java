@@ -20,8 +20,8 @@ public class HighArrayApp {
         arr.insert(33);
         arr.insert(10000);
         arr.insert(123456);
-
-        arr.display();                // display items
+        arr.insert(1);
+        arr.display("origin");                // display items
 
         int searchKey = 35;           // search for item
         if( arr.find(searchKey) )
@@ -32,15 +32,14 @@ public class HighArrayApp {
         arr.delete(00);               // delete 3 items
         arr.delete(55);
         arr.delete(99);
+        arr.display("origin");                // display items again
 
-        arr.display();                // display items again
-        System.out.println(arr.getMax());
-        arr.removeMax();
-        arr.display();
 
-        long[] newArray = arr.sortArray();
-        System.out.println(Arrays.toString(newArray));
-        arr.display(); // тоже отсортирован!
+//        System.out.println(arr.getMax());
+//        arr.display("Nonorigin");
+//        arr.removeMax();
+
+//        arr.display("noorigin");
     }  // end main()
 }
 /*

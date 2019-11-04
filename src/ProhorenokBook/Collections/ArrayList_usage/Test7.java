@@ -1,6 +1,5 @@
-package ProhorenokBook.Collections.List_usage.ArrayList_usage;
+package ProhorenokBook.Collections.ArrayList_usage;
 
-import javax.print.DocFlavor;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

@@ -33,11 +33,11 @@ public class OrdArrayUsage {
 
         arr.delete(99);                // delete 3 items
         arr.delete(44);
-//        arr.delete(99);
-//        arr.delete(0);
-//        arr.delete(123456);
-//        arr.delete(22);
-//        arr.delete(44);
+        arr.delete(99);
+        arr.delete(0);
+        arr.delete(123456);
+        arr.delete(22);
+        arr.delete(44);
 
         arr.display(); // display items again
 
