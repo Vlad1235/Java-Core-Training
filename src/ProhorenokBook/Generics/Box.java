@@ -1,5 +1,8 @@
 package ProhorenokBook.Generics;
 
+/**
+ * Создаем шаблон класса, который может принимать ЛЮБОЙ ТИП ОБЪЕКТА
+ */
 public class Box {
     private Object obj;
 

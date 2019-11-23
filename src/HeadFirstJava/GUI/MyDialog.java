@@ -1,4 +1,4 @@
-package ProhorenokBook.GUI;
+package HeadFirstJava.GUI;
 
 import javax.swing.*;
 

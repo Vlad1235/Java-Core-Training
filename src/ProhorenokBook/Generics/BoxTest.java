@@ -1,5 +1,8 @@
 package ProhorenokBook.Generics;
 
+/**
+ * Мы создаем любой тип экземпляра класса Box и затем через привидение типов меняем на нужный нам тип.
+ */
 public class BoxTest {
     public static void main(String[] args) {
         Box box1 = new Box("Строка");
