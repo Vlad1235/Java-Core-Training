@@ -1,16 +1,16 @@
-package Alishev.basicjava.lesson36;
+package Alishev.basicjava.ReadingFromFile;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 /**
- * Как из строки считать  числовые примитивы
+ * Как из строки считать числовые примитивы
  */
 public class ReadingFromFile3 {
     public static void main(String[] args) throws FileNotFoundException {
 
-        File file = new File("C:"+File.separator+"Projects"+File.separator+"MyTraining"+File.separator+"src"+File.separator+"Alishev"+File.separator+"basicjava"+File.separator+"lesson36"+File.separator+"Test3.txt");
+        File file = new File("C:"+File.separator+"Projects"+File.separator+"MyTraining"+File.separator+"src"+File.separator+"Alishev"+File.separator+"basicjava"+File.separator+"ReadingFromFile"+File.separator+"Test3.txt");
         Scanner scanner = new Scanner(file);
         String line = scanner.nextLine(); // считываем из файла 1 строку в файле сразу. (если есть 2ая строка, он ее не прочитает)
         String[] numberString = line.split(" "); // МЕТОД разделит сроку основываясь на пробелы между значениями

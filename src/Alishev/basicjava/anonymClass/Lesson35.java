@@ -12,6 +12,7 @@ public class Lesson35 {
         То есть тут это наследник класса Animal, без фактического отдельного создания класса Animal
          */
         Animal animalAnonim = new Animal(){
+                @Override
                 public void eat(){
                     System.out.println("Other Animal is eating...");
                 }

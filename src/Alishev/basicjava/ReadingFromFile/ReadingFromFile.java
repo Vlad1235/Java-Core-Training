@@ -1,4 +1,4 @@
-package Alishev.basicjava.lesson36;
+package Alishev.basicjava.ReadingFromFile;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class ReadingFromFile {
     public static void main(String[] args) throws FileNotFoundException {
 
-        File file = new File("C:"+File.separator+"Projects"+File.separator+"MyTraining"+File.separator+"src"+File.separator+"Alishev"+File.separator+"basicjava"+File.separator+"lesson36"+File.separator+"Test.txt");
+        File file = new File("C:"+File.separator+"Projects"+File.separator+"MyTraining"+File.separator+"src"+File.separator+"Alishev"+File.separator+"basicjava"+File.separator+"ReadingFromFile"+File.separator+"Test.txt");
         Scanner scanner = new Scanner(file); // может не только с консоли считывать, но также и из файла
         while (scanner.hasNextLine()){
             System.out.println(scanner.nextLine());
