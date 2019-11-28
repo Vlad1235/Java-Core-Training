@@ -1,7 +1,5 @@
-package Alishev.middleleveljava.list.linkedlist;
+package Alishev.middleleveljava.list.linkedlist.mylinkedlist;
 
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * linkedList двусвязный и параметизованный

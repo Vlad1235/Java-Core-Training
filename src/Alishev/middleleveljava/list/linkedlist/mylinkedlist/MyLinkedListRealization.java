@@ -1,4 +1,4 @@
-package Alishev.middleleveljava.list.linkedlist;
+package Alishev.middleleveljava.list.linkedlist.mylinkedlist;
 
 import java.util.Arrays;
 
