@@ -13,5 +13,7 @@ public class Test {
 
         //  если метод equals не переопределен в классе Animal   System.out.println(animal1.equals(animal2)); // false  мы попрежнему сравниваем объекты как ссылки, так как сам метод внутри использует == для сравнения
             System.out.println(animal1.equals(animal2)); // true метод equals переопределен
+        System.out.println(animal1.hashCode()); // 1791741888
+        System.out.println(animal2.hashCode()); // 1595428806
     }
 }

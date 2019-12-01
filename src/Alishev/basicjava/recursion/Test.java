@@ -14,7 +14,7 @@ public class Test {
     1
      */
     private static void counter(int n){ // вариант 1
-        if (n==0) return; // условие выхода
+        if (n==0) return; // условие выхода BaseCase
         System.out.println(n);
         counter(n-1); // тут одновременно ждут и 3 и 2
     }
@@ -26,7 +26,7 @@ public class Test {
     Американская горка, сначала по цепочке все открылись(но не закрылись), потом как дошли до вершины(не выполнения условия if) полетели вниз закрываться строго по очереди.
      */
     private static void counter2(int n){ // вариант СТЕКОВОГО ВЫЗОВА. LIFO. Самый последний завершает работу 1 и потом каждый закрывается по цепочке.
-        if (n==0) return; // условие выхода
+        if (n==0) return; // условие выхода BaseCase
         counter(n-1); // тут одновременно ждут и 3 и 2
         System.out.println(n);
     }

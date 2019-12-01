@@ -24,5 +24,8 @@ public class Test {
         /*
          Для сравнения строк лучше использовать метод equals()
          */
+
+        System.out.println(s3.hashCode()); //99162322
+        System.out.println(s4.hashCode()); //99162322
     }
 }

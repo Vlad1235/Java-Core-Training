@@ -8,8 +8,8 @@ import java.io.Serializable;
  */
 public class Person implements Serializable {
     private static final long serialVersionUID = -2743012942344820586L; //
-    private transient int id; // оно будет по умолчанию инициализироваться нулем
-    private String name; // оно при transient будет по умолчанию инициализироваться null
+    private transient int id; // при восстановлении поле по умолчанию инициализироваться нулем
+    private String name; // если поле будет transient то по умолчанию инициализировалось бы как null
 
 
     public Person(int id, String name) {
