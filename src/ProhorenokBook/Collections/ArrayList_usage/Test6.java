@@ -17,7 +17,7 @@ public class Test6 {
         arr0.sort(null); // сортировка
         System.out.println(arr0.toString()); // [1, 2, 2, 3, 3, 8]
         int index = Collections.binarySearch(arr0,3);
-        System.out.println(index); //4 // метод вовзвращает первый найденный по порядку элемент
+        System.out.println(index); //4 // метод вовзвращает первый найденный по порядку элемент(!!!!НЕ ИНДЕКС ЕГО А ИМЕННО ПО ПОРЯДКУ)
         int noFind = Collections.binarySearch(arr0,5);
         System.out.println(noFind); // -6 Важно! возвращает отрицательное число в расчете -(index)-1
 

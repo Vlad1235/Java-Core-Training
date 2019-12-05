@@ -25,7 +25,7 @@ public class Test {
 }
 
 class myThread extends Thread {
-    private boolean running = true;
+    private volatile boolean running = true; // помечаем переменную чтобы она храниласт в ОЗУ
 
     public void run() {
         while (running) {
