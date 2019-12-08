@@ -6,7 +6,7 @@ package ProhorenokBook.Numbers.StrokaVChislo;
  */
 public class ToNumber {
     public static void main(String[] args) {
-        int x;
+        int x,y;
         x = Integer.parseInt("119",10);
         System.out.println(x);
     }

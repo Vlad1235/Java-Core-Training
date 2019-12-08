@@ -9,10 +9,11 @@ public class CompareTo_string {
         String s1 = "строка", s2 = "строка";
         System.out.println(s1.compareTo(s2));
         System.out.println(s1.substring(0,2).compareTo(s2.substring(0,3)));
-        System.out.println("абв".compareTo("абв"));
+        System.out.println("абв".compareTo("абв")); // с учетом регистра
         System.out.println("абВ".compareTo("абв"));
         System.out.println("абю".compareTo("абя"));
-        System.out.println("абВ".compareToIgnoreCase("абв"));
+        System.out.println("абВ".compareToIgnoreCase("абв"));// без учета регистра символов сравнение
+        System.out.println(s1.isEmpty()); //false
     }
 }
 /*
