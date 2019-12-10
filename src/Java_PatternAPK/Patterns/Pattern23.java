@@ -1,26 +1,25 @@
 package Java_PatternAPK.Patterns;
 
 /**
- ABCDE
- ABCD
- ABC
- AB
- A
+ EDCBA
+ EDCB
+ EDC
+ ED
+ E
  */
-
-public class Pattern19 {
+public class Pattern23 {
     public static void main(String[] args) {
-        int z = 5;
+        int lim = 0;
         for (int i = 0; i < 5; i++) {
-            int count = 0;
-            for (char x = 'A'; x <= 'E'; x++) {
-                if (count < z) {
+            int count = 5;
+            for (char x = 'E'; x >= 'A'; x--) {
+                if (count > lim) {
                     System.out.print(x);
                 }
-                count++;
+                count--;
             }
             System.out.println();
-            z--;
+            lim++;
         }
     }
 }
