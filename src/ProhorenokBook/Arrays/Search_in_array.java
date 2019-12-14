@@ -1,4 +1,4 @@
-package ProhorenokBook.Arrays.Sorting;
+package ProhorenokBook.Arrays;
 
 /**
  * Поиск элементов в неотсортированном массиве. Чисто для обучения, так как в реальности так не делают, очень долго.

@@ -1,4 +1,4 @@
-package ProhorenokBook.Generics.GenericClass.GenericClass_via_Interface;
+package ProhorenokBook.Generics.GenericInterface.GenericClass_via_Interface;
 
 public class Class_A implements ITest1,ITest2 {
     @Override

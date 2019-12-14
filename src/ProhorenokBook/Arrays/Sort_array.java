@@ -1,4 +1,4 @@
-package ProhorenokBook.Arrays.Sorting;
+package ProhorenokBook.Arrays;
 
 import java.util.Arrays;
 import java.util.Collections; // Необходим для обратной сортировки.

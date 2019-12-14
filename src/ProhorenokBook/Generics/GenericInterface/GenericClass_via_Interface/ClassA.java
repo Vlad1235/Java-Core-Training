@@ -1,4 +1,4 @@
-package ProhorenokBook.Generics.GenericClass.GenericClass_via_Interface;
+package ProhorenokBook.Generics.GenericInterface.GenericClass_via_Interface;
 
 /**
  * Ограничиваем обощеныый тип несколькими интрефейсами.
