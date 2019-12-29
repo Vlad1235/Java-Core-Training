@@ -27,11 +27,12 @@ public class Lesson23 {
         /*
         Good practice
          */
-        StringBuilder sb = new StringBuilder("Hello"); // не нужно создавать новые объекты, сразу можно конкатенировать новые строки через метод append()
+        StringBuilder sb = new StringBuilder("Hello"); // не нужно создавать новые объекты, сразу можно конкатенировать новые строки через метод append(), так как не создается новых объектов. Все добавляется к sb
       //  sb.append(" my");
       //  sb.append(" friend");
         sb.append(" my").append(" friend"); // более красивый вариант с помощью methodchaining
         System.out.println(sb.toString());
+        //System.out.println(sb); одинаково
 
 
 
